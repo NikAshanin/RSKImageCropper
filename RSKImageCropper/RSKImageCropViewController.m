@@ -31,9 +31,9 @@
 
 static const CGFloat kPortraitCircleMaskRectInnerEdgeInset = 15.0f;
 static const CGFloat kPortraitSquareMaskRectInnerEdgeInset = 20.0f;
-static const CGFloat kPortraitMoveAndScaleLabelVerticalMargin = 64.0f;
+static const CGFloat kPortraitMoveAndScaleLabelVerticalMargin = 31.0f;
 static const CGFloat kPortraitCancelAndChooseButtonsHorizontalMargin = 13.0f;
-static const CGFloat kPortraitCancelAndChooseButtonsVerticalMargin = 21.0f;
+static const CGFloat kPortraitCancelAndChooseButtonsVerticalMargin = -27.0f;
 
 static const CGFloat kLandscapeCircleMaskRectInnerEdgeInset = 45.0f;
 static const CGFloat kLandscapeSquareMaskRectInnerEdgeInset = 45.0f;
@@ -214,9 +214,9 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
                                                    constant:constant];
         [self.view addConstraint:constraint];
         
-        constant = -kPortraitCancelAndChooseButtonsVerticalMargin;
-        self.cancelButtonBottomConstraint = [NSLayoutConstraint constraintWithItem:self.cancelButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual
-                                                                            toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0f
+        constant = kPortraitCancelAndChooseButtonsVerticalMargin;
+        self.cancelButtonBottomConstraint = [NSLayoutConstraint constraintWithItem:self.cancelButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual
+                                                                            toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0f
                                                                           constant:constant];
         [self.view addConstraint:self.cancelButtonBottomConstraint];
         
@@ -230,9 +230,9 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
                                                    constant:constant];
         [self.view addConstraint:constraint];
         
-        constant = -kPortraitCancelAndChooseButtonsVerticalMargin;
-        self.chooseButtonBottomConstraint = [NSLayoutConstraint constraintWithItem:self.chooseButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual
-                                                                            toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0f
+        constant = kPortraitCancelAndChooseButtonsVerticalMargin;
+        self.chooseButtonBottomConstraint = [NSLayoutConstraint constraintWithItem:self.chooseButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual
+                                                                            toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0f
                                                                           constant:constant];
         [self.view addConstraint:self.chooseButtonBottomConstraint];
         
